@@ -14,3 +14,30 @@ test dataset.
 Approach: The classical machine learning tasks like Data Exploration, Data Cleaning,
 Feature Engineering, Model Building and Model Testing. Try out different machine
 learning algorithms that’s best fit for the above case.
+
+
+
+
+Dataset:
+Dataset Link :- Dataset
+
+
+Project Evaluation metrics:
+
+Code:
+ You are supposed to write a code in a modular fashion
+ Safe: It can be used without causing harm.
+ Testable: It can be tested at the code level.
+ Maintainable: It can be maintained, even as your codebase grows.
+ Portable: It works the same in every environment (operating system)
+ You have to maintain your code on GitHub.
+ You have to keep your GitHub repo public so that anyone can check your code.
+ Proper readme file you have to maintain for any project development.
+ You should include basic workflow and execution of the entire project in the readme
+file on GitHub
+ Follow the coding standards: https://www.python.org/dev/peps/pep-0008/
+
+Database:
+ You are supposed to use a given dataset for this project which is a Cassandra
+database.
+ https://astra.dev/ineuron
