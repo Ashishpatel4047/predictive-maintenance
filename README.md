@@ -1,56 +1,47 @@
 # predictive-maintenance
-#Problem Statement:
-In industry, prognostics and health management are key topics for anticipating asset
-state and avoiding downtime and breakdowns. Run-to-Failure simulation data from
-turbofan jet engines is included.
-The C-MAPSS software was used to simulate engine degradation. Four separate sets
-of operational conditions and fault modes were simulated in four different ways. To
-characterize fault progression, record numerous sensor channels. The Prognostics CoE
-at NASA Ames provided the data set.
-The main goal is to predict the remaining useful life (RUL) of each engine. RUL is
-equivalent of number of flights remained for the engine after the last data point in the
-test dataset.
-
-Approach: The classical machine learning tasks like Data Exploration, Data Cleaning,
-Feature Engineering, Model Building and Model Testing. Try out different machine
-learning algorithms that’s best fit for the above case.
 
 
 
+Experimental Scenario
 
-Dataset:
-Dataset Link :- Dataset
+Data sets consists of multiple multivariate time series. Each data set is further divided into training and test subsets. Each time series is from a different engine – i.e., the data can be considered to be from a fleet of engines of the same type. Each engine starts with different degrees of initial wear and manufacturing variation which is unknown to the user. This wear and variation is considered normal, i.e., it is not considered a fault condition. There are three operational settings that have a substantial effect on engine performance. These settings are also included in the data. The data is contaminated with sensor noise.
+
+The engine is operating normally at the start of each time series, and develops a fault at some point during the series. In the training set, the fault grows in magnitude until system failure. In the test set, the time series ends some time prior to system failure. The objective of the competition is to predict the number of remaining operational cycles before failure in the test set, i.e., the number of operational cycles after the last cycle that the engine will continue to operate. Also provided a vector of true Remaining Useful Life (RUL) values for the test data.
+
+Feature
+2)	time, in cycles
+3)	operational setting 1
+4)	operational setting 2
+5)	operational setting 3
+6)	sensor measurement  1
+7)	sensor measurement  2
+...
+26)	sensor measurement  26
+
+Data Set: FD001
+Train trjectories: 100
+Test trajectories: 100
+Conditions: ONE (Sea Level)
+Fault Modes: ONE (HPC Degradation)
+
+Data Set: FD002
+Train trjectories: 260
+Test trajectories: 259
+Conditions: SIX 
+Fault Modes: ONE (HPC Degradation)
+
+Data Set: FD003
+Train trjectories: 100
+Test trajectories: 100
+Conditions: ONE (Sea Level)
+Fault Modes: TWO (HPC Degradation, Fan Degradation)
+
+Data Set: FD004
+Train trjectories: 248
+Test trajectories: 249
+Conditions: SIX 
+Fault Modes: TWO (HPC Degradation, Fan Degradation)
 
 
-Project Evaluation metrics:
 
-Code:
- You are supposed to write a code in a modular fashion
- Safe: It can be used without causing harm.
- Testable: It can be tested at the code level.
- Maintainable: It can be maintained, even as your codebase grows.
- Portable: It works the same in every environment (operating system)
- You have to maintain your code on GitHub.
- You have to keep your GitHub repo public so that anyone can check your code.
- Proper readme file you have to maintain for any project development.
- You should include basic workflow and execution of the entire project in the readme
-file on GitHub
- Follow the coding standards: https://www.python.org/dev/peps/pep-0008/
-
-Database:
- You are supposed to use a given dataset for this project which is a Cassandra
-database.
- https://astra.dev/ineuron
-
-1. [Github account](https:github.com)
-2.[HerokuAccount](https://heroku.com)
-3. [VS Code IDE](https://code.visualstudio.com/)
-4. [GitCLI] (https://git-scm.com/book/en/v2/Getting-Started-The-Command-Line)
-        
-
-'''
-creat a virtual environment 
-pip install virtual environment 
-python -m enve
-'''
 
